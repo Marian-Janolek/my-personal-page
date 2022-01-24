@@ -1,0 +1,36 @@
+{
+  "name": "my-page",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon backend/app --ignore client",
+    "build-fe": "cd frontend && npm run build",
+    "install-fe": "cd frontend && npm install",
+    "heroku-postbuild": "npm run install-fe && npm run build-fe"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Marian-Janolek/my-page.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Marian-Janolek/my-page/issues"
+  },
+  "homepage": "https://github.com/Marian-Janolek/my-page#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.2",
+    "express-mongo-sanitize": "^2.2.0",
+    "helmet": "^5.0.1",
+    "mongoose": "^6.1.5",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.15",
+    "xss-clean": "^0.1.1"
+  },
+  "engines": {
+    "node": "16.x"
+  }
+}
